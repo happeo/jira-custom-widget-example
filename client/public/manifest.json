@@ -1,0 +1,8 @@
+{
+  "short_name": "Happeo custom widget - Jira",
+  "name": "Happeo custom widget - Jira",
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}

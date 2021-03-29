@@ -1,0 +1,66 @@
+{
+  "name": "jira-custom-widget",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@happeouikit/buttons": "^1.0.13",
+    "@happeouikit/colors": "^1.0.3",
+    "@happeouikit/form-elements": "^1.0.17",
+    "@happeouikit/layout": "^1.1.10",
+    "@happeouikit/list": "^1.1.13",
+    "@happeouikit/loaders": "^1.0.1",
+    "@happeouikit/toast": "^1.1.3",
+    "@happeouikit/typography": "^1.0.6",
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.1.0",
+    "@testing-library/user-event": "^12.1.10",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-intl": "^5.13.5",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "4.0.3",
+    "styled-components": "^5.2.1",
+    "web-vitals": "^1.0.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "watch": "npm-watch"
+  },
+  "watch": {
+    "build": {
+      "patterns": [
+        "src"
+      ],
+      "extensions": "js",
+      "quiet": false,
+      "legacyWatch": true,
+      "delay": 2500,
+      "runOnChangeOnly": false
+    }
+  },
+  "proxy": "http://localhost:8080/",
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "npm-watch": "^0.9.0"
+  }
+}

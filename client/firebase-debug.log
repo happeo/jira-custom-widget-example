@@ -1,0 +1,13 @@
+[debug] [2021-03-24T07:58:52.578Z] ----------------------------------------------------------------------
+[debug] [2021-03-24T07:58:52.579Z] Command:       /Users/ankero/.nvm/versions/node/v10.23.0/bin/node /Users/ankero/.nvm/versions/node/v10.23.0/bin/firebase login:ci
+[debug] [2021-03-24T07:58:52.580Z] CLI Version:   8.16.2
+[debug] [2021-03-24T07:58:52.580Z] Platform:      darwin
+[debug] [2021-03-24T07:58:52.580Z] Node Version:  v10.23.0
+[debug] [2021-03-24T07:58:52.581Z] Time:          Wed Mar 24 2021 09:58:52 GMT+0200 (Eastern European Standard Time)
+[debug] [2021-03-24T07:58:52.581Z] ----------------------------------------------------------------------
+[debug] [2021-03-24T07:58:52.581Z] 
+[info] 
+[info] Visit this URL on this device to log in:
+[info] https://accounts.google.com/o/oauth2/auth?client_id=563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com&scope=email%20openid%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcloudplatformprojects.readonly%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Ffirebase%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcloud-platform&response_type=code&state=233613706&redirect_uri=http%3A%2F%2Flocalhost%3A9005
+[info] 
+[info] Waiting for authentication...
