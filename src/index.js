@@ -35,7 +35,7 @@ app.post("/api/verify", async (req, res) => {
     res.cookie(COOKIE_NAME, session, {
       httpOnly: true,
       secure: true,
-      sameSite: "strict",
+      sameSite: "none",
     });
     res.send({ result: "ok" });
   } catch (error) {
