@@ -31,6 +31,7 @@ app.post("/api/verify", async (req, res) => {
       organisationId: validatedData.organisationId,
     });
 
+    // TODO: This cookie will expire in 1 hour so propably good to handle this differently
     res.cookie(COOKIE_NAME, session, {
       httpOnly: true,
       secure: true,
