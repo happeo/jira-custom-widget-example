@@ -24,11 +24,10 @@ app.post("/api/verify", async (req, res) => {
   try {
     const { token } = req.body;
     const validatedData = verifySharedToken(token);
-
     const session = createSession({
-      id: validatedData.id,
-      primaryEmail: validatedData.primaryEmail,
-      organisationId: validatedData.organisationId,
+      userId: validatedData.user.id,
+      primaryEmail: validatedData.user.primaryEmail,
+      orgId: validatedData.organisation.id,
     });
 
     // TODO: This cookie will expire in 1 hour so propably good to handle this differently. Also using sameSite: "none" is not a good idea in this situation.
@@ -56,12 +55,15 @@ app.get("/api/issues", async (req, res) => {
     const processedSettings = processSettings(jiraSettings, user);
     console.log(processedSettings);
     const client = jiraClient(jiraSettings);
-    console.log(client);
+
     const data = await client.searchJira(processSettings(jiraSettings, user));
 
     res.send(data);
   } catch (error) {
-    res.sendStatus(error);
+    res.send(error.statusCode || 500, {
+      error: error.response.body,
+      statusCode: error.statusCode,
+    });
   }
 });
 

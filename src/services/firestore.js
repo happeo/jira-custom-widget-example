@@ -13,9 +13,7 @@ const db = admin.firestore();
 
 async function getSettings(user) {
   try {
-    const ref = db
-      .collection("jira")
-      .doc(`organisation_${user.organisationId}`);
+    const ref = db.collection("jira").doc(`organisation_${user.orgId}`);
     const doc = await ref.get();
     if (!doc.exists) {
       console.log("No such document!");
@@ -32,9 +30,7 @@ async function getSettings(user) {
 
 async function saveSettings(user, data) {
   try {
-    const ref = db
-      .collection("jira")
-      .doc(`organisation_${user.organisationId}`);
+    const ref = db.collection("jira").doc(`organisation_${user.orgId}`);
     await ref.set(
       {
         ...data,
