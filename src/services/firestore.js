@@ -35,14 +35,14 @@ async function saveSettings(user, data) {
       {
         ...data,
         updatedMillis: admin.firestore.Timestamp.fromDate(new Date()),
-        updatedBy: user.id,
+        updatedBy: user.userId,
       },
       { merge: true },
     );
     return {
       ...data,
       updatedMillis: admin.firestore.Timestamp.fromDate(new Date()),
-      updatedBy: user.id,
+      updatedBy: user.userId,
     };
   } catch (error) {
     throw error;
